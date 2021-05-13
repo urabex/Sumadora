@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>SumadoraApp</title>
+    <meta charset="UTF-8">
+    <title>Sumadora</title>
+    <meta name="description" contact="Sumadoraは脳の働きを改善するサプリメントを解説、紹介しているサイトです。
+    脳に直接影響を与えるもの、内臓の働きを改善して結果的に脳に良い影響を与えるもの、筋肉の細胞を改善しつつ脳に良い
+    影響を与えるもの、この3つの観点からサプリメントを紹介しております。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +18,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/header" %>
+    <main class="main">
+      <%= yield %>
+    </main>
+    <%= render "layouts/footer" %>
   </body>
 </html>
