@@ -3,17 +3,17 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <p class="navbar-brand">
-        <%= image_tag("sumadora_logo.svg") %>
+        <%= link_to image_tag("sumadora_logo.svg"), root_path %>
       <p>
       <ul class="navbar-nav">
         <li class="nav-item mr-4">
-          <%= link_to "利用規約", term_path %>
+          <%= link_to "利用規約", term_path, class: "nav-link" %>
         </li>
         <li class="nav-item mr-4">
-          <%= link_to "プライバシーポリシー", privacy_path %>
+          <%= link_to "プライバシーポリシー", privacy_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "お問い合わせ", contact_path %>
+          <%= link_to "お問い合わせ", contact_path, class: "nav-link" %>
         </li>
       </ul>
     </div>

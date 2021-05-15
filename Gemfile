@@ -72,7 +72,7 @@ gem 'font-awesome-sass', '~> 5.13'
 gem 'jquery-rails'
 gem 'ransack'
 gem 'activeadmin'
-gem 'active_admin_theme'
+gem "active_material", github: "vigetlabs/active_material"
 gem 'cancancan'
 gem 'devise'
 gem 'devise-i18n'

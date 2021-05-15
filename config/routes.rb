@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # devise_for :admins,
-  #   controllers: {
-  #     sessions:      'admins/sessions',
-  #     passwords:     'admins/passwords',
-  #   }
-
   devise_for :users,
     path: '',
     path_names: {
@@ -23,11 +19,11 @@ Rails.application.routes.draw do
     scope module: :public do
       root to: 'homes#top'
       get 'about' => 'homes#about'
-      
+
       resources :post_brains, only: [:index, :show]
       resources :post_visceras, only: [:index, :show]
       resources :post_muscles, only: [:index, :show]
-      
+
       resource :users, only: [:edit, :update, :destroy]
       get 'users/mypage' => 'users#show'
 

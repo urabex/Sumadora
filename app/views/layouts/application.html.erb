@@ -8,7 +8,6 @@
     影響を与えるもの、この3つの観点からサプリメントを紹介しております。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no,address=no,email=no">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -19,7 +18,12 @@
 
   <body>
     <%= render "layouts/header" %>
+    <% unless user_signed_in? %>
+      <%= render "users/registrations/new" %>
+      <%= render "users/sessions/new" %>
+    <% end %>
     <main class="main">
+      <%= render "layouts/flash" %>
       <%= yield %>
     </main>
     <%= render "layouts/footer" %>
