@@ -32,9 +32,11 @@
             </li>
             <% if user_signed_in? %>
               <li class="nav-item mr-4">
-                <%= link_to "マイページ", users_mypage_path, class: "nav-link" %>
+                <button class="header__nav--mybtn">
+                  <%= link_to "マイページ", users_mypage_path, class: "nav-link header__nav--myaction" %>
+                </button>
               </li>
-              <li class="nav-item mr-4">
+              <li class="nav-item mr-2">
                 <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "nav-link" %>
               </li>
             <% else %>
@@ -43,10 +45,13 @@
                   <span class="header__nav--signaction">会員登録</span>
                 </button>
               </li>
-              <li class="nav-item">
+              <li class="nav-item mr-2">
                 <%= link_to "ログイン", "", "data-toggle": "modal", "data-target": "#loginModal" ,class: "nav-link" %>
               </li>
             <% end %>
+            <li class="nav-item header__nav--search">
+              <%= link_to "", "" , "data-toggle": "modal", "data-target": "#searchModal", class: "fas fa-search header__nav--searchaction"%>
+            </li>
           </ul>
         </div>
       </div>
