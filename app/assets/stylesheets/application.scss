@@ -43,20 +43,35 @@ a:link, a:visited, a:hover, a:active {
   }
 
  &__nav{
-   margin-left: auto;
+    margin-left: auto;
 
-   &--signbtn{
-     border: 1px solid #4193AB;
-     border-radius: 9999px;
-     background-color: #4193AB;
-   }
+    &--mybtn{
+      border: 1px solid #dee2e6;
+      border-radius: 9999px;
+      background-color: #ffffff;
+    }
 
-   &--signaction{
-     padding: 0 10px;
-     color: #ffffff;
-   }
- }
+    &--signbtn{
+      border: 1px solid #4193AB;
+      border-radius: 9999px;
+      background-color: #4193AB;
+    }
 
+    &--signaction{
+      padding: 0 10px;
+      color: #ffffff;
+    }
+
+    &--search{
+      border-left: 1px solid #dee2e6;
+      padding-left: 13px;
+    }
+
+    &--searchaction{
+      padding-top: 7px;
+      font-size: 27px;
+    }
+  }
 }
 
 .modal{
@@ -130,6 +145,10 @@ a:link, a:visited, a:hover, a:active {
     &--text{
       margin-right: auto;
     }
+  }
+  
+  &__search{
+    
   }
 
 }
