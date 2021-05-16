@@ -1,8 +1,8 @@
 class Contact < ApplicationRecord
   validates :name, length: { minimum: 3, maximum: 20 }, uniqueness: true
   validates :name_kana, length: { minimum: 3, maximum: 20 }, uniqueness: true
-  validates :company,  allow_blank: true
-  validates :department, allow_blank: true
+  validates :company, length: { in: 1..25 }, allow_blank: true
+  validates :department, length: { in: 1..25 }, allow_blank: true
 
   # email
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
