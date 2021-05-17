@@ -78,16 +78,16 @@ ActiveRecord::Schema.define(version: 2021_05_13_025825) do
   end
 
   create_table "post_tag_relations", force: :cascade do |t|
-    t.integer "tag_id_id"
-    t.integer "post_brain_id_id"
-    t.integer "post_viscera_id_id"
-    t.integer "post_muscle_id_id"
+    t.integer "tag_id"
+    t.integer "post_brain_id"
+    t.integer "post_viscera_id"
+    t.integer "post_muscle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["post_brain_id_id"], name: "index_post_tag_relations_on_post_brain_id_id"
-    t.index ["post_muscle_id_id"], name: "index_post_tag_relations_on_post_muscle_id_id"
-    t.index ["post_viscera_id_id"], name: "index_post_tag_relations_on_post_viscera_id_id"
-    t.index ["tag_id_id"], name: "index_post_tag_relations_on_tag_id_id"
+    t.index ["post_brain_id"], name: "index_post_tag_relations_on_post_brain_id"
+    t.index ["post_muscle_id"], name: "index_post_tag_relations_on_post_muscle_id"
+    t.index ["post_viscera_id"], name: "index_post_tag_relations_on_post_viscera_id"
+    t.index ["tag_id"], name: "index_post_tag_relations_on_tag_id"
   end
 
   create_table "post_visceras", force: :cascade do |t|

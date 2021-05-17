@@ -112,8 +112,6 @@ a:link, a:visited, a:hover, a:active {
     &--text{
       margin-right: auto;
     }
-
-
   }
 
   &__login{
@@ -146,43 +144,15 @@ a:link, a:visited, a:hover, a:active {
       margin-right: auto;
     }
   }
-  
-  &__search{
-    
-  }
 
+  &__search{
+
+  }
 }
 
 
 
 .main{
-
-  &__visual{
-    background-color: #f5f5f5;
-    background-image: image-url('sumadora_main_image.png');
-    background-repeat: no-repeat;
-    height: 650px;
-
-    &--text{
-      font-size: 70px;
-      font-weight: bold;
-      margin-top: 175px;
-    }
-  }
-
-  &__about{
-    background-color: #f5f5f5;
-    height: 500px;
-
-    &--title{
-      font-size: 20px;
-    }
-
-    &--heading{
-      font-size: 45px;
-      font-weight: bold;
-    }
-  }
 
   &__forgot{
     background-color: #f5f5f5;
@@ -222,6 +192,26 @@ a:link, a:visited, a:hover, a:active {
     }
   }
 
+  &__pagination{
+
+    & span{
+      padding: 15px;
+      margin-right: 10px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      font-size: 15px;
+    }
+
+    & span.current{
+      background-color: #4193AB;
+      color: #ffffff;
+    }
+
+    & span:hover{
+      background-color: #dee2e6;
+      transition: background-color 0.5s;
+    }
+  }
 }
 
 .banner__area{
@@ -230,8 +220,16 @@ a:link, a:visited, a:hover, a:active {
   background-image: image-url('sumadora_banner_image.png');
   background-repeat: no-repeat;
 
+  &--inner{
+    padding: 105px 0;
+  }
+
+  &--title{
+    font-weight: bold;
+    color: #ffffff;
+  }
+
   &--text{
-    padding: 105px;
     color: #ffffff;
   }
 }
@@ -243,5 +241,4 @@ a:link, a:visited, a:hover, a:active {
     height: 50px;
     width: 175px;
   }
-
 }
