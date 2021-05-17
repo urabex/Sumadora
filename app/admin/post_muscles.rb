@@ -12,4 +12,16 @@ ActiveAdmin.register PostMuscle do
 #   permitted
 # end
 
+permit_params :title, :image, :body, :posted_date
+
+form title: "post_muscle" do |f|
+  f.inputs do
+    f.input :title
+    f.input :image, as: :refile
+    f.input :posted_date
+    f.input :body
+  end
+  f.actions
+end
+
 end
