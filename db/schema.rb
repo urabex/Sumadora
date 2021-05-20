@@ -60,49 +60,36 @@ ActiveRecord::Schema.define(version: 2021_05_13_025825) do
   end
 
   create_table "post_brains", force: :cascade do |t|
+    t.integer "user_id"
     t.string "image_id"
     t.string "title"
     t.date "posted_date"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_post_brains_on_user_id"
   end
 
   create_table "post_muscles", force: :cascade do |t|
+    t.integer "user_id"
     t.string "image_id"
     t.string "title"
     t.date "posted_date"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "post_tag_relations", force: :cascade do |t|
-    t.integer "tag_id"
-    t.integer "post_brain_id"
-    t.integer "post_viscera_id"
-    t.integer "post_muscle_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["post_brain_id"], name: "index_post_tag_relations_on_post_brain_id"
-    t.index ["post_muscle_id"], name: "index_post_tag_relations_on_post_muscle_id"
-    t.index ["post_viscera_id"], name: "index_post_tag_relations_on_post_viscera_id"
-    t.index ["tag_id"], name: "index_post_tag_relations_on_tag_id"
+    t.index ["user_id"], name: "index_post_muscles_on_user_id"
   end
 
   create_table "post_visceras", force: :cascade do |t|
+    t.integer "user_id"
     t.string "image_id"
     t.string "title"
     t.date "posted_date"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "tags", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_post_visceras_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

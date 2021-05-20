@@ -1,6 +1,6 @@
 class PostViscera < ApplicationRecord
-  has_many :post_tag_relations
-  has_many :tags, through: :post_tag_relations
+  has_many :favorites, dependent: :destroy
+  belongs_to :user
   attachment :image
 
   validates :title, length: { minimum: 10 }, uniqueness: true

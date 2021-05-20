@@ -145,6 +145,39 @@ a:link, a:visited, a:hover, a:active {
     }
   }
 
+  &__destroy{
+    background-color: #f5f5f5;
+
+    &--buttonlist{
+      display: flex;
+      justify-content: center;
+    }
+
+    &--buttonitem{
+      padding: 20px 40px;
+    }
+
+    &--mypagereturn{
+      width: 190px;
+      height: 40px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    &--withdrawal{
+      width: 190px;
+      height: 40px;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      background-color: #333333;
+      color: #ffffff;
+    }
+  }
+
   &__search{
 
   }
@@ -156,30 +189,77 @@ a:link, a:visited, a:hover, a:active {
 
   &__forgot{
     background-color: #f5f5f5;
-    height: 500px;
 
-    &--heading{
-      border-bottom: 1px solid #dee2e6;
-      padding-bottom: 10px;
+    &--inner{
+      padding: 60px 0;
     }
 
-    &--description{
-      margin-top: 15px;
-    }
-
-    &--form{
-      width: 710px;
-      border-radius: 5px;
-      border: 1px solid #dee2e6;
+    &--title{
+      font-weight: bold;
+      padding-bottom: 5px;
     }
 
     &--text{
-      margin-top: 30px;
-      margin-bottom: 15px;
+      margin-top: 15px, 0, 10px, 0;
+    }
+
+    &--formitem{
+      width: 710px;
+      border-radius: 5px;
+      border: 1px solid #dee2e6;
+      margin-top: 5px;
+    }
+
+    &--linkarea{
+      margin-top: 15px;
     }
 
     &--button{
       margin-bottom: 15px;
+    }
+
+    &--action{
+      width: 190px;
+      height: 40px;
+      border: 1px solid #4193AB;
+      border-radius: 5px;
+      background-color: #4193AB;
+      color: #ffffff;
+    }
+  }
+
+  &__myedit{
+    background-color: #f5f5f5;
+
+    &--inner{
+      padding: 60px 0;
+    }
+
+    &--title{
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+
+    &--formlist{
+      margin-top: 15px;
+    }
+
+    &--username,
+    &--email,
+    &--password,
+    &--newpassword{
+      padding-bottom: 10px;
+    }
+
+    &--verification{
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    &--formitem{
+      width: 710px;
+      border-radius: 5px;
+      border: 1px solid #dee2e6;
     }
 
     &--action{

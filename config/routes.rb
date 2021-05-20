@@ -24,7 +24,7 @@ Rails.application.routes.draw do
       resources :post_visceras, only: [:index, :show]
       resources :post_muscles, only: [:index, :show]
 
-      resource :users, only: [:edit, :update, :destroy]
+      resource :users, only: [:destroy]
       get 'users/mypage' => 'users#show'
 
       get 'term' => 'informations#term'
