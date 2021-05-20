@@ -80,6 +80,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-input", require: ["inputs/refile_input"]
 gem "refile-mini_magick"
 gem 'kaminari', '~> 0.17.0'
+gem 'recaptcha',  require: "recaptcha/rails"
 gem 'dotenv-rails'
 
 group :production do

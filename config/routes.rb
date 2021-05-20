@@ -27,9 +27,12 @@ Rails.application.routes.draw do
       resource :users, only: [:destroy]
       get 'users/mypage' => 'users#show'
 
-      get 'term' => 'informations#term'
-      get 'privacy' => 'informations#privacy'
-      get 'contact' => 'informations#contact'
+      resource :informations, only: [:create] do
+        get 'term' => 'informations#term'
+        get 'privacy' => 'informations#privacy'
+        get 'contact' => 'informations#contact'
+        get 'completed' => 'informations#completed'
+      end
     end
 
 end
