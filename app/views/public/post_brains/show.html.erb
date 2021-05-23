@@ -1,0 +1,22 @@
+<section class="main__brainshow">
+  <div class="container">
+    <div class="main__brainshow--inner">
+      <article class="main__brainshow--area">
+        <div class="main__brainshow--thumbnail">
+          <%= attachment_image_tag(@postbrain, :image, :fill, 1070, 500, format: "jpeg", class: "main__brainshow--image") %>
+        </div>
+        <div class="main__brainshow--textarea">
+          <h2 class="main__brainshow--title">
+            <%= @postbrain.title%>
+          </h2>
+          <p class="main__brainshow--date">
+            <%= @postbrain.posted_date%>
+          </p>
+          <div class="main__brainshow--text">
+            <%= markdown(@postbrain.body) %>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

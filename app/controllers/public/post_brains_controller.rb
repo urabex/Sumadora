@@ -5,6 +5,7 @@ class Public::PostBrainsController < ApplicationController
   end
 
   def show
+    @postbrain = PostBrain.find(params[:id])
   end
 
 end

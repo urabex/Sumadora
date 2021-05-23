@@ -73,7 +73,7 @@ gem 'jquery-rails'
 gem 'ransack'
 gem 'activeadmin'
 gem "active_material", github: "vigetlabs/active_material"
-gem 'cancancan'
+gem 'redcarpet', '~> 2.3.0'
 gem 'devise'
 gem 'devise-i18n'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
