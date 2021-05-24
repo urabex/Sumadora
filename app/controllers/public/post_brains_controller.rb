@@ -6,6 +6,8 @@ class Public::PostBrainsController < ApplicationController
 
   def show
     @postbrain = PostBrain.find(params[:id])
+    impressionist(@postbrain, nil)
+    @pageviews = @postbrain.impressionist_count
   end
 
 end

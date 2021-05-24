@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :null_session
 
+  $post_brain_views = PostBrain.order(impressions_count: "DESC").limit(5)
+  $post_viscera_views = PostViscera.order(impressions_count: "DESC").limit(5)
+  $post_muscle_views = PostMuscle.order(impressions_count: "DESC").limit(5)
+
   private
 
   def after_sign_up_path_for(resource)

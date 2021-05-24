@@ -5,6 +5,9 @@ class Public::PostMusclesController < ApplicationController
   end
 
   def show
+    @postmuscle = PostMuscle.find(params[:id])
+    impressionist(@postmuscle, nil)
+    @pageviews = @postmuscle.impressionist_count
   end
 
 end

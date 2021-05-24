@@ -16,18 +16,23 @@
 @import 'bootstrap';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
-
+@import "./variables";
 
 html, body, a{
   font-family: -apple-system, BlinkMacSystemFont, Roboto,
   "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic,
   "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
-  color: #333333;
+  color: $font_color_black;
 }
 
 a:link, a:visited, a:hover, a:active {
-  color: #333333;
+  color: $font_color_black;
   text-decoration: none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: $font_color_white;
+  background-color: $accent_color;
 }
 
 .field_with_errors {
@@ -36,7 +41,7 @@ a:link, a:visited, a:hover, a:active {
 
 
 .header{
-  background-color: #ffffff;
+  background-color: $base_color;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
   height: 80px;
 
@@ -50,24 +55,24 @@ a:link, a:visited, a:hover, a:active {
     margin-left: auto;
 
     &--mybtn{
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
       border-radius: 9999px;
-      background-color: #ffffff;
+      background-color: $base_color;
     }
 
     &--signbtn{
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 9999px;
-      background-color: #4193AB;
+      background-color: $accent_color;
     }
 
     &--signaction{
       padding: 0 10px;
-      color: #ffffff;
+      color: $font_color_white;
     }
 
     &--search{
-      border-left: 1px solid #dee2e6;
+      border-left: 1px solid $line_color_bluegray;
       padding-left: 13px;
     }
 
@@ -81,12 +86,12 @@ a:link, a:visited, a:hover, a:active {
 .modal{
 
   &__signup{
-    background-color: #f5f5f5;
+    background-color: $main_color;
 
     &--form{
       width: 710px;
       border-radius: 5px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
     }
 
     &--formlist{
@@ -96,7 +101,7 @@ a:link, a:visited, a:hover, a:active {
     &--formitem{
       width: 327px;
       border-radius: 5px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
     }
 
     &--button{
@@ -107,10 +112,10 @@ a:link, a:visited, a:hover, a:active {
     &--action{
       width: 190px;
       height: 40px;
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 5px;
-      background-color: #4193AB;
-      color: #ffffff;
+      background-color: $accent_color;
+      color: $font_color_white;
     }
 
     &--text{
@@ -119,7 +124,7 @@ a:link, a:visited, a:hover, a:active {
   }
 
   &__login{
-    background-color: #f5f5f5;
+    background-color: $main_color;
 
     &--password{
       margin-top: 15px;
@@ -128,7 +133,7 @@ a:link, a:visited, a:hover, a:active {
     &--form{
       width: 710px;
       border-radius: 5px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
     }
 
     &--button{
@@ -139,9 +144,9 @@ a:link, a:visited, a:hover, a:active {
     &--action{
       width: 190px;
       height: 40px;
-      border: 1px solid #333333;
+      border: 1px solid $line_color_bluegray;
       border-radius: 5px;
-      background-color: #ffffff;
+      background-color: $base_color;
     }
 
     &--text{
@@ -150,7 +155,7 @@ a:link, a:visited, a:hover, a:active {
   }
 
   &__destroy{
-    background-color: #f5f5f5;
+    background-color: $main_color;
 
     &--buttonlist{
       display: flex;
@@ -164,21 +169,21 @@ a:link, a:visited, a:hover, a:active {
     &--mypagereturn{
       width: 190px;
       height: 40px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
       border-radius: 5px;
       margin-bottom: 10px;
-      background-color: #ffffff;
-      color: #333333;
+      background-color: $base_color;
+      color: $font_color_black;
     }
 
     &--withdrawal{
       width: 190px;
       height: 40px;
-      border: 1px solid #333333;
+      border: 1px solid $warning_color;
       border-radius: 5px;
       margin-bottom: 10px;
-      background-color: #333333;
-      color: #ffffff;
+      background-color: $warning_color;
+      color: $font_color_white;
     }
   }
 
@@ -187,12 +192,10 @@ a:link, a:visited, a:hover, a:active {
   }
 }
 
-
-
 .main{
 
   &__forgot{
-    background-color: #f5f5f5;
+    background-color: $main_color;
 
     &--inner{
       padding: 60px 0;
@@ -210,7 +213,7 @@ a:link, a:visited, a:hover, a:active {
     &--formitem{
       width: 710px;
       border-radius: 5px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
       margin-top: 5px;
     }
 
@@ -225,15 +228,15 @@ a:link, a:visited, a:hover, a:active {
     &--action{
       width: 190px;
       height: 40px;
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 5px;
-      background-color: #4193AB;
-      color: #ffffff;
+      background-color: $accent_color;
+      color: $font_color_white;
     }
   }
 
   &__myedit{
-    background-color: #f5f5f5;
+    background-color: $base_color;
 
     &--inner{
       padding: 60px 0;
@@ -242,6 +245,17 @@ a:link, a:visited, a:hover, a:active {
     &--title{
       font-weight: bold;
       padding-bottom: 5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &--title::after{
+      content: "";
+      flex-grow: 1;
+      margin: 0 3px;
+      height: 1px;
+      background-color: $line_color_bluegray;
     }
 
     &--formlist{
@@ -263,16 +277,16 @@ a:link, a:visited, a:hover, a:active {
     &--formitem{
       width: 710px;
       border-radius: 5px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
     }
 
     &--action{
       width: 190px;
       height: 40px;
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 5px;
-      background-color: #4193AB;
-      color: #ffffff;
+      background-color: $accent_color;
+      color: $font_color_white;
     }
   }
 
@@ -281,26 +295,94 @@ a:link, a:visited, a:hover, a:active {
     & span{
       padding: 15px;
       margin-right: 10px;
-      border: 1px solid #dee2e6;
+      border: 1px solid $line_color_bluegray;
       border-radius: 5px;
       font-size: 15px;
     }
 
     & span.current{
-      background-color: #4193AB;
-      color: #ffffff;
+      background-color: $accent_color;
+      color: $base_color;
     }
 
     & span:hover{
-      background-color: #dee2e6;
+      background-color: #DEE2E6;
       transition: background-color 0.5s;
     }
+  }
+
+  &__ranking{
+    background-color: $main_color;
+
+    &--inner{
+      padding: 60px 0;
+    }
+
+    &--title{
+      font-weight: bold;
+      padding-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    &--title::after{
+      content: "";
+      flex-grow: 1;
+      margin: 0 3px;
+      height: 1px;
+      background-color: $base_color;
+    }
+
+    &--area{
+      margin-top: 15px;
+    }
+
+    &--headertab{
+      margin-bottom: 15px;
+    }
+
+    &--card{
+      border-bottom: 1px solid $base_color;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      display: flex;
+    }
+
+    &--card:first-child{
+      border-top: 1px solid $base_color;
+      padding-top: 20px;
+      margin-top: 40px;
+    }
+
+    &--image{
+      border-radius: 10px;
+    }
+
+    &--textarea{
+      padding-left: 30px;
+    }
+
+    &--heading{
+      font-size: 20px;
+    }
+
+    &--date{
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--view{
+      font-size: 15px;
+      padding-top: 3px;
+    }
+
   }
 }
 
 .banner__area{
   height: 300px;
-  background-color: #4193AB;
+  background-color: $accent_color;
   background-image: image-url('sumadora_banner_image.png');
   background-repeat: no-repeat;
 
@@ -310,11 +392,11 @@ a:link, a:visited, a:hover, a:active {
 
   &--title{
     font-weight: bold;
-    color: #ffffff;
+    color: $font_color_white;
   }
 
   &--text{
-    color: #ffffff;
+    color: $font_color_white;
   }
 }
 
