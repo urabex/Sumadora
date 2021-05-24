@@ -27,6 +27,10 @@
       <%= render "layouts/flash" %>
       <%= yield %>
     </main>
+    <% if controller.controller_name != "informations" %>
+      <%= render "layouts/ranking" %>
+    <% end %>
+    <%= render "layouts/banner" %>
     <%= render "layouts/footer" %>
   </body>
 </html>

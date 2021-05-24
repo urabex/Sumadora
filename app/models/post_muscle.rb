@@ -1,6 +1,5 @@
 class PostMuscle < ApplicationRecord
-  has_many :favorites, dependent: :destroy
-  # belongs_to :user
+  is_impressionable counter_cache: true
   attachment :image
 
   validates :title, length: { minimum: 10 }, uniqueness: true

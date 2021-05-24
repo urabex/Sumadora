@@ -29,6 +29,6 @@ function changesignUpModal(){
     $('body').removeClass('modal-open');
     $('.modal-backdrop').remove();
     $('#loginModal').modal('hide');
-    
+
     $('#signUpModal').modal();
 }

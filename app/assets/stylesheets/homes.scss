@@ -2,10 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "./variables";
+
 .main{
 
   &__visual{
-    background-color: #f5f5f5;
+    background-color: $main_color;
     background-image: image-url('sumadora_main_image.png');
     background-repeat: no-repeat;
     height: 650px;
@@ -38,7 +40,7 @@
       flex-grow: 1;
       margin: 0 3px;
       height: 1px;
-      background: #dee2e6;
+      background-color: $line_color_bluegray;
     }
 
     &--area{
@@ -66,15 +68,15 @@
     &--button{
       width: 190px;
       height: 40px;
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 5px;
-      background-color: #4193AB;
-      color: #ffffff;
+      background-color: $accent_color;
+      color: $font_color_white;
     }
   }
 
   &__postviscera{
-    background-color: #f5f5f5;
+    background-color: $main_color;
 
     &--inner{
       padding: 60px 0;
@@ -92,7 +94,7 @@
       flex-grow: 1;
       margin: 0 3px;
       height: 1px;
-      background: #ffffff;
+      background-color: $base_color;
     }
 
     &--area{
@@ -120,10 +122,10 @@
     &--button{
       width: 190px;
       height: 40px;
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 5px;
-      background-color: #4193AB;
-      color: #ffffff;
+      background-color: $accent_color;
+      color: $font_color_white;
     }
   }
 
@@ -145,7 +147,7 @@
       flex-grow: 1;
       margin: 0 3px;
       height: 1px;
-      background: #dee2e6;
+      background-color: $line_color_bluegray;
     }
 
     &--area{
@@ -173,15 +175,15 @@
     &--button{
       width: 190px;
       height: 40px;
-      border: 1px solid #4193AB;
+      border: 1px solid $accent_color;
       border-radius: 5px;
-      background-color: #4193AB;
+      background-color: $accent_color;
       color: #ffffff;
     }
   }
 
   &__about{
-    background-color: #f5f5f5;
+    background-color: $base_color;
 
     &--inner{
       padding: 60px 0;

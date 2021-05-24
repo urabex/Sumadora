@@ -5,6 +5,9 @@ class Public::PostViscerasController < ApplicationController
   end
 
   def show
+    @postviscera = PostViscera.find(params[:id])
+    impressionist(@postviscera, nil)
+    @pageviews = @postviscera.impressionist_count
   end
 
 end
