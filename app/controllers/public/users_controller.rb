@@ -8,7 +8,7 @@ class Public::UsersController < ApplicationController
   def destroy
     @user = current_user
     @user.destroy
-    flash[:notice] = "ご登録頂き、ありがとうございました。"
+    flash[:notice] = "ご利用ありがとうございました。"
     redirect_to root_path
   end
 

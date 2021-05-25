@@ -16,6 +16,7 @@
 @import 'bootstrap';
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+@import "toastr";
 @import "./variables";
 
 html, body, a{
@@ -38,7 +39,6 @@ a:link, a:visited, a:hover, a:active {
 .field_with_errors {
   display: contents;
 }
-
 
 .header{
   background-color: $base_color;
@@ -188,14 +188,60 @@ a:link, a:visited, a:hover, a:active {
   }
 
   &__search{
+    background-color: $main_color;
 
+    &--formitem{
+      margin-bottom: 15px;
+    }
+
+    &--form{
+      width: 100%;
+      height: 65px;
+      border-radius: 5px;
+      border: 1px solid $line_color_bluegray;
+    }
+
+    &--select{
+      width: 100%;
+      height: 40px;
+      border-radius: 5px;
+      border: 1px solid $line_color_bluegray;
+      font-size: 18px;
+    }
+
+    &--buttonlist{
+      display: flex;
+      border-top: 1px solid $line_color_bluegray;
+      padding: 25px 0;
+    }
+
+    &--buttonitem{
+      padding-right: 30px;
+    }
+
+    &--action{
+      width: 190px;
+      height: 40px;
+      border: 1px solid $accent_color;
+      border-radius: 5px;
+      background-color: $accent_color;
+      color: $font_color_white;
+    }
+
+    &--return{
+      width: 190px;
+      height: 40px;
+      border: 1px solid $line_color_bluegray;
+      border-radius: 5px;
+      background-color: $base_color;
+    }
   }
 }
 
 .main{
 
   &__forgot{
-    background-color: $main_color;
+    background-color: $base_color;
 
     &--inner{
       padding: 60px 0;
@@ -204,6 +250,17 @@ a:link, a:visited, a:hover, a:active {
     &--title{
       font-weight: bold;
       padding-bottom: 5px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &--title::after{
+      content: "";
+      flex-grow: 1;
+      margin: 0 3px;
+      height: 1px;
+      background-color: $line_color_bluegray;
     }
 
     &--text{
@@ -338,20 +395,14 @@ a:link, a:visited, a:hover, a:active {
     }
 
     &--headertab{
-      margin-bottom: 15px;
+      border-bottom: 1px solid $base_color;
+      padding-bottom: 40px;
     }
 
     &--card{
       border-bottom: 1px solid $base_color;
-      padding-bottom: 20px;
-      margin-bottom: 20px;
+      padding: 25px 0;
       display: flex;
-    }
-
-    &--card:first-child{
-      border-top: 1px solid $base_color;
-      padding-top: 20px;
-      margin-top: 40px;
     }
 
     &--image{

@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require bootstrap
+//= require toastr
 //= require_tree .
 
 function changeloginModal(){
@@ -31,4 +32,8 @@ function changesignUpModal(){
     $('#loginModal').modal('hide');
 
     $('#signUpModal').modal();
+}
+
+toastr.options = {
+    "positionClass": "toast-bottom-left",
 }
