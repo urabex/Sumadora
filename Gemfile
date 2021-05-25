@@ -70,7 +70,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.5'
 gem 'font-awesome-sass', '~> 5.13'
 gem 'jquery-rails'
-gem 'ransack'
+gem 'toastr-rails'
 gem 'activeadmin'
 gem "active_material", github: "vigetlabs/active_material"
 gem 'redcarpet', '~> 2.3.0'
