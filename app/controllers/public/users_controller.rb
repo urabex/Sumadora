@@ -11,5 +11,4 @@ class Public::UsersController < ApplicationController
     flash[:notice] = "ご利用ありがとうございました。"
     redirect_to root_path
   end
-
 end

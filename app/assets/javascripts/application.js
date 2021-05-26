@@ -38,7 +38,8 @@ toastr.options = {
     "positionClass": "toast-bottom-left",
 }
 
-$(function() {
+$(document).on('turbolinks:load', function() {
+  $(function() {
     $('.slick').slick({
         infinite: true,
         dots:true,
@@ -49,4 +50,5 @@ $(function() {
         prevArrow: '<i class="slide-arrow prev-arrow slide-arrow prev-arrow fas fa-angle-left"></i>',
         nextArrow: '<i class="slide-arrow next-arrow slide-arrow next-arrow fas fa-angle-right"></i>'
      });
+});
 });

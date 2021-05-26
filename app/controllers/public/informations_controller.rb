@@ -1,5 +1,4 @@
 class Public::InformationsController < ApplicationController
-
   def term
   end
 

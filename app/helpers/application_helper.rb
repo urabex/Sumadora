@@ -29,7 +29,7 @@ module ApplicationHelper
     options = {
       filter_html: true,
       hard_wrap: true,
-      space_after_headers: true
+      space_after_headers: true,
     }
 
     extensions = {
@@ -56,10 +56,10 @@ module ApplicationHelper
   end
 
   def resource
-     @resource ||= User.new
+    @resource ||= User.new
   end
 
   def devise_mapping
-     @devise_mapping ||= Devise.mappings[:user]
+    @devise_mapping ||= Devise.mappings[:user]
   end
 end

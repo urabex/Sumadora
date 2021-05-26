@@ -1,7 +1,6 @@
 class Public::PostBrainsController < ApplicationController
-
   def index
-    @post_brain_pages =PostBrain.order(id: "DESC").page(params[:page]).per(10)
+    @post_brain_pages = PostBrain.order(id: "DESC").page(params[:page]).per(10)
   end
 
   def show
@@ -9,5 +8,4 @@ class Public::PostBrainsController < ApplicationController
     impressionist(@postbrain, nil)
     @pageviews = @postbrain.impressionist_count
   end
-
 end
