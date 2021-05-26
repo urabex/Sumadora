@@ -22,8 +22,8 @@
           脳に直接効く
         </h2>
       </div>
-      <div class="main__postbrain--area">
-        <% @post_brains.first(4).each do |post_brain| %>
+      <div class="main__postbrain--area slick">
+        <% @post_brains.first(8).each do |post_brain| %>
           <%= link_to post_brain_path(post_brain.id) do %>
             <article class="main__postbrain--card">
               <div class="main__postbrain--thumbnail">
@@ -56,8 +56,8 @@
           内臓からよくする
         </h2>
       </div>
-      <div class="main__postviscera--area">
-        <% @post_visceras.first(4).each do |post_viscera| %>
+      <div class="main__postviscera--area slick">
+        <% @post_visceras.first(8).each do |post_viscera| %>
           <%= link_to post_viscera_path(post_viscera.id) do %>
             <article class="main__postviscera--card">
               <div class="main__postviscera--thumbnail">
@@ -90,8 +90,8 @@
           筋肉からよくする
         </h2>
       </div>
-      <div class="main__postmuscle--area">
-        <% @post_muscles.first(4).each do |post_muscle| %>
+      <div class="main__postmuscle--area slick">
+        <% @post_muscles.first(8).each do |post_muscle| %>
           <%= link_to post_muscle_path(post_muscle.id) do %>
             <article class="main__postmuscle--card">
               <div class="main__postmuscle--thumbnail">

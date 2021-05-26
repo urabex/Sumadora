@@ -17,6 +17,8 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import "toastr";
+@import "slick-theme";
+@import "slick";
 @import "./variables";
 
 html, body, a{
@@ -38,6 +40,31 @@ a:link, a:visited, a:hover, a:active {
 
 .field_with_errors {
   display: contents;
+}
+
+.slide-arrow {
+  z-index: 100;
+  bottom: 0;
+  height: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 0;
+  background-color: rgba(255, 255, 255, 0);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #333333;
+}
+.prev-arrow {
+  left: -45px;
+}
+.next-arrow {
+  right: -20px;
 }
 
 .header{
