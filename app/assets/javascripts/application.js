@@ -46,7 +46,7 @@ $(document).on('turbolinks:load', function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 10000,
         prevArrow: '<i class="slide-arrow prev-arrow slide-arrow prev-arrow fas fa-angle-left"></i>',
         nextArrow: '<i class="slide-arrow next-arrow slide-arrow next-arrow fas fa-angle-right"></i>'
      });

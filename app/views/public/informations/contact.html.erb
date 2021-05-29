@@ -48,6 +48,7 @@
                   <%= f.check_box :agreement, :as => :boolean, checked:false, class: "main__contact--checkbox" %>
                   プライバシーポリシーに同意する
                 </p>
+                <%= recaptcha_tags %>
               </div>
               <div class="main__contact--button">
                 <%= f.submit "送信する", class: "main__contact--action" %>

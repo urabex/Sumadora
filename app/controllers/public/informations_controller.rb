@@ -7,6 +7,11 @@ class Public::InformationsController < ApplicationController
 
   def contact
     @contact = Contact.new
+    if verify_recaptcha(model: @contact) && @contact.save
+      redirect_to @contact
+    else
+      render 'contact'
+    end
   end
 
   def completed
