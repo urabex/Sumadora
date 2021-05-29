@@ -1,5 +1,4 @@
 class Public::HomesController < ApplicationController
-
   def top
     @post_brains = PostBrain.order(id: "DESC")
     @post_visceras = PostViscera.order(id: "DESC")
@@ -8,5 +7,4 @@ class Public::HomesController < ApplicationController
 
   def about
   end
-
 end

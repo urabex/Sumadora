@@ -8,6 +8,14 @@ GIT
       sinatra (~> 2.0.0.beta2)
 
 GIT
+  remote: https://github.com/stympy/faker.git
+  revision: 3f0ddf95d0905c7bd26409a682b33cec2e79a623
+  branch: master
+  specs:
+    faker (2.18.0)
+      i18n (>= 1.6, < 2)
+
+GIT
   remote: https://github.com/vigetlabs/active_material.git
   revision: e91faafcb016477637330ea593673cd521c60aa9
   specs:
@@ -395,6 +403,7 @@ DEPENDENCIES
   devise-i18n
   dotenv-rails
   factory_bot_rails
+  faker!
   font-awesome-sass (~> 5.13)
   impressionist (~> 1.6.1)
   jbuilder (~> 2.5)

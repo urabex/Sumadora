@@ -40,6 +40,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do
@@ -60,8 +63,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'rspec-rails'
-  gem 'factory_bot_rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -81,7 +82,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-input", require: ["inputs/refile_input"]
 gem "refile-mini_magick"
 gem 'kaminari', '~> 0.17.0'
-gem 'recaptcha',  require: "recaptcha/rails"
+gem 'recaptcha', require: "recaptcha/rails"
 gem 'dotenv-rails'
 
 group :production do
