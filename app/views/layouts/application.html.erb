@@ -13,7 +13,9 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
 
   <body>
@@ -22,10 +24,15 @@
       <%= render "users/registrations/new" %>
       <%= render "users/sessions/new" %>
     <% end %>
+    <%= render "layouts/search" %>
     <main class="main">
       <%= render "layouts/flash" %>
       <%= yield %>
     </main>
+    <% if controller.controller_name != "informations" %>
+      <%= render "layouts/ranking" %>
+    <% end %>
+    <%= render "layouts/banner" %>
     <%= render "layouts/footer" %>
   </body>
 </html>

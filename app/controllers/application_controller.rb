@@ -1,5 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+  protect_from_forgery with: :null_session
+
+  $post_brain_views = PostBrain.order(impressions_count: "DESC").limit(5)
+  $post_viscera_views = PostViscera.order(impressions_count: "DESC").limit(5)
+  $post_muscle_views = PostMuscle.order(impressions_count: "DESC").limit(5)
 
   private
 
@@ -16,15 +21,13 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_out_path_for(resource)
-     root_path
+    root_path
   end
-
 
   protected
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :email])
-    devise_parameter_sanitizer.permit(:sign_in,keys:[:email])
+    devise_parameter_sanitizer.permit(:sign_in, keys: [:email])
   end
-
 end
