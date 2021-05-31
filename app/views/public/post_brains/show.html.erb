@@ -11,7 +11,9 @@
           </h2>
           <p class="main__brainshow--date">
             <%= @postbrain.posted_date%>
-            <span class="main__brainshow--view fas fa-eye"><%= number_with_delimiter(@pageviews) %></span>
+            <span class="main__brainshow--view fas fa-eye">
+              <%= number_with_delimiter(@pageviews) %>
+            </span>
           </p>
           <div class="main__brainshow--text">
             <%= markdown(@postbrain.body) %>

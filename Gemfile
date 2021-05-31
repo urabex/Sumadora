@@ -77,6 +77,7 @@ gem 'activeadmin'
 gem "active_material", github: "vigetlabs/active_material"
 gem 'redcarpet', '~> 2.3.0'
 gem 'impressionist', '~>1.6.1'
+gem 'counter_culture'
 gem 'devise'
 gem 'devise-i18n'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
